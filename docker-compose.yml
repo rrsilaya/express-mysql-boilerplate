@@ -20,9 +20,9 @@ services:
             - "3300:3306"
         command: --init-file /mnt/init.sql
         environment:
-            MYSQL_DATABASE: ''
-            MYSQL_USER: ''
-            MYSQL_PASSWORD: ''
+            MYSQL_DATABASE: ${TYPEORM_DATABASE}
+            MYSQL_USER: ${TYPEORM_USER}
+            MYSQL_PASSWORD: ${TYPEORM_PASSWORD}
             MYSQL_ROOT_PASSWORD: 'root'
         volumes:
             - ./src/config/database.sql:/mnt/init.sql
