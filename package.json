@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start": "backpack",
-    "build": "backpack build"
+    "build": "backpack build",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm",
+    "schema:sync": "yarn typeorm schema:sync"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
